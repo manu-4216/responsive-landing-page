@@ -1,0 +1,32 @@
+
+@font-face {
+  font-family: 'edosz';
+  src: url('../fonts/edosz.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/edosz.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/edosz.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/edosz.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'spinnaker';
+  src: url('../fonts/Spinnaker-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Spinnaker-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Spinnaker-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Spinnaker-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Apply these fonts
+body {
+  font-family: 'edosz', Arial, Helvetica, sans-serif;
+}
+input[type=submit] {
+  font-family: 'edosz', Arial, Helvetica, sans-serif;
+}
+
+form, footer {
+  font-family: 'spinnaker', Arial, Helvetica, sans-serif;
+}
+
+.nav label {
+  font-family: 'spinnaker', Arial, Helvetica, sans-serif;
+}

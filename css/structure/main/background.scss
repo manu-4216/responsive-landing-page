@@ -1,0 +1,43 @@
+.background {
+  box-sizing: border-box;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+
+.background__image-area {
+  position: relative;
+}
+
+
+.background__motto {
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+
+  margin: 0 auto;
+
+  color: white;
+  @include responsive(font-size, 15.2vw, 0.44);
+  font-weight: 300;
+  line-height: 100%;
+
+  // the 3 lines of text
+  > div {
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap; // prevent the text taking more than 1 line
+  }
+}
+
+
+.background__image-area {
+  height: 100%;
+}
+
+
+.background__image-area * {
+  max-width: 100%;
+  height: auto;
+}

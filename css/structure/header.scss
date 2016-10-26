@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+}
+
+
+.header__title {
+  position: absolute;
+  z-index: 1; // brings it in front of the image
+  top: 2.8em;
+
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+
+  font-weight: 300;
+  @include responsive(font-size, 3.4vw);
+  color: white;
+
+  // Use a span as the footprint for applying the background stripe:
+  span {
+    background-image: url('../images/stripe-lg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    padding: 0.9em 3em;
+  }
+}

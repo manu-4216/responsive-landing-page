@@ -1,0 +1,33 @@
+// Breakpoints:
+$md-breakpt: 40em;
+$lg-breakpt: 50em;
+
+
+// -Colors - declaration:
+$maroon: #625247;
+$green: #2E8126;
+$red: #BE1F3B;
+$darkgrey: #878787;
+$lightgrey1: #E0E0E0;
+$lightgrey2: #F5F5F5;
+$white: white;
+$transparent-white: rgba(255, 255, 255, 0.75);
+
+// -Colors - using them for elements:
+$nav-item-text-color:          $green;
+$nav-item-text-color-hover:    $red;
+$nav-background:               $transparent-white;
+$nav-menu-label:               $green;
+$nav-hamburger-color:          $green;
+$offer-text-color:             $maroon;
+$percentage-text-color:        $maroon;
+$offer-title-color:            $red;
+$email-text-color:             $darkgrey;
+$email-box-color1:             $lightgrey1;
+$email-box-color2:             $lightgrey2;
+$footer-text-color:            $darkgrey;
+$data-viz-percentage-color:    $green;
+$data-viz-text-color:          $maroon;
+$gains-label-text-color:       $maroon;
+$gains-total-text-color:       $maroon;
+$gains-partial-sum-text-color: $white;

@@ -1,0 +1,123 @@
+@media screen and (min-width: $md-breakpt) {
+
+  /* SPLIT THE WIDTH IN 2:
+   * 1. for the background image  and
+   * 2. for the content (offer and email-form)
+   */
+  main {
+    .background {
+      display: inline-block;
+      width: 53%;
+
+      // Position adjustment:
+      .background__motto {
+        top: 44%;
+        left: 47%;
+      }
+    }
+    .content {
+      display: inline-block;
+      width: 46%;
+    }
+  }
+
+
+  /* HANDLE TEXT DIFERENCES (mobile vs large-screen):
+    * 1. GAGNEZ / A GAGNER
+    * 2.  date ' DU ... Decembre'
+    */
+  .offer__punch-line {
+    // mobile date:
+    h2:first-child {
+      display: none;
+    }
+    // desktop date:
+    h2:nth-of-type(2) {
+      display: block;
+    }
+  }
+
+  .offer__date {
+    // mobile date:
+    div:first-child {
+      display: none;
+    }
+    // desktop date:
+    div:nth-of-type(2) {
+      display: block;
+    }
+  }
+
+  // OTHER LAYOUT POSITIONING FIXES & ADJUSTMENTS:
+  .content {
+    position: absolute;
+    margin-top: 0;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -45%);
+  }
+
+  // Move the footer relative to the background image:
+  .main-footer {
+    left: 50%;
+    transform: translateX(-25%);
+  }
+
+  // DATA-VIZ
+  .data-viz__objectif {
+    display: inline-block;
+    margin: 1em 1em 1em 1em;
+    padding-right: 10%;
+  }
+  .data-viz__title {
+    padding-bottom: 0.7em;
+  }
+  .data-viz__gains {
+    display: inline-block;
+  }
+
+  // Display the clipart for large screens:
+  .offer__clipart {
+    display: block;
+  }
+
+  .nav label {
+      display: block; // show for large screens
+  }
+
+  // Replaces the mobile-first color:
+  .nav span {
+    background: $nav-hamburger-color;
+  }
+}
+
+
+@media screen and (min-width: $lg-breakpt) {
+
+  // Forces 100 of height:
+  .background__image-area {
+    height: 100vh; // fullscreen
+    overflow: hidden;
+    .background__image, picture, img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .content {
+    height: 100vh;
+    .offer {
+      margin-top: 20vh;
+    }
+  }
+
+  .header__title {
+    top: 9vh;
+  }
+
+  .offer__clipart {
+    display: block;
+    top: 11%;
+    right: 19%;
+  }
+}

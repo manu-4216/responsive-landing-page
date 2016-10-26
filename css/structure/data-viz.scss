@@ -1,0 +1,155 @@
+.data-viz {
+  margin: 0;
+  padding: 0;
+  @include responsive(padding-bottom, 20vw, 0.3);
+
+  text-align: center;
+  background: $lightgrey2;
+}
+
+
+.data-viz__title {
+  padding: 0.7em 0 1.6em 0;
+
+  color: $offer-title-color;
+  @include responsive(font-size, 9.5vw);
+  font-weight: 300;
+}
+
+
+.data-viz__objectif {
+  display: block;
+  margin: 1em auto;
+  padding: 0 1em;
+}
+
+
+.data-viz__gains {
+  display: block;
+}
+
+
+/****************************************
+/* DATA-VIZ__OBJECTIF:
+/****************************************/
+.data-viz__objectif__percentage {
+  padding-top: 0.2em;
+
+  color: $data-viz-percentage-color;
+  @include responsive(font-size, 14.6vw, 0.4);
+}
+
+
+.data-viz__objectif__text {
+  position: relative;
+
+  margin-bottom: 4em;
+
+  color: $data-viz-text-color;
+  @include responsive(font-size, 4.3vw, 0.4);
+  font-weight: 500;
+  text-align: center;
+}
+
+
+.data-viz__objectif__circle {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+
+  margin-bottom: 2em;
+
+  @include responsive(width, 47vw, 0.4);
+  height: auto;
+
+  text-align: center;
+}
+
+
+/*************************************************
+/* DATA-VIZ__GAINS:
+/*************************************************/
+.data-viz__gains {
+  position: relative;
+
+  @include responsive(width, 80vw, 0.35);
+  @include responsive(height, 10vw, 0.35);
+  @include responsive(margin-top, 40vw, 0.03);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.data-viz__gains__total-bar {
+  position: absolute;
+  top: 0;
+  left: 0%;
+
+  @include responsive(width, 80vw, 0.35);
+  height: 100%;
+  z-index: 1;
+
+  // display stripe:
+  background-image: url('../images/stripe-lg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 100% 100%;
+
+  // Makes the total-bar transparent:
+  opacity: 0.3;
+}
+
+
+.data-viz__gains__label {
+  position: absolute;
+  top: -100%;
+  left: 3%;
+
+  color: $gains-label-text-color;
+  text-align: left;
+  @include responsive(font-size, 6vw, 0.4);
+  font-weight: 300;
+}
+
+
+.data-viz__gains__total {
+  position: absolute;
+  top: -90%;
+  right: 4%;
+
+  color: $gains-label-text-color;
+  @include responsive(font-size, 4.5vw, 0.4);
+}
+
+
+.data-viz__gains__partial-sum {
+  position: absolute;
+  top: 0%;
+  left: 47%;
+  transform: translateX(-120%);
+  z-index: 2;
+
+  color: $gains-partial-sum-text-color;
+  @include responsive(font-size, 5vw, 0.35);
+  @include responsive(line-height, 10vw, 0.35);
+}
+
+
+.data-viz__gains__partial-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  text-align: center;
+  width: 50%;
+  height: 100%;
+
+  // display stripe:
+  background-image: url('../images/stripe-lg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 100% 100%;
+}

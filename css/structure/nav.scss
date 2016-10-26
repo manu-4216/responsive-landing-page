@@ -1,0 +1,160 @@
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Hidden. Show only on press on the hamburger menu button
+.nav .nav__list {
+  opacity: 0;
+  top: 100vh;
+
+  position: relative;
+  //top: 0;
+  top: -120vh; // hide the menu list off-sceen
+  right: 0;
+  z-index: 3;
+
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: $transparent-white;
+
+  transition: all 0.45s ease-in-out;
+}
+
+.nav input:checked ~ .nav__list {
+  opacity: 1;
+  top: 0;
+}
+
+
+// Checkbox for showing & hiding the menu:
+.nav input {
+  opacity: 0; // hidden
+
+  position: absolute;
+  @include responsive(top, 7vw);
+  @include responsive(right, 9%);
+  z-index: 5;
+
+  @include responsive(width, 8vw);
+  @include responsive(height, 8vw);
+
+  cursor: pointer;
+}
+
+
+.nav label {
+  display: none; // hide on mobile
+
+  position: absolute;
+  @include responsive(top, 8vw);
+  @include responsive(right, 9%);
+  z-index: 4;
+
+  margin-top: 2.5em;
+
+  color: $nav-menu-label;
+  font-size: 1.2vw;
+  font-weight: 500;
+
+  transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.nav span {
+  position: absolute;
+  @include responsive(right, 10%);
+  z-index: 4;
+
+  @include responsive(width, 6vw);
+  @include responsive(height, 1vw);
+  background: white;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.nav span:nth-of-type(1) {
+  @include responsive(top, 8vw);
+}
+.nav span:nth-of-type(2) {
+  @include responsive(top, 10vw);
+}
+.nav span:nth-of-type(3) {
+  @include responsive(top, 12vw);
+}
+
+.nav span:nth-of-type(1) {
+  transform-origin: left;
+}
+
+.nav span:nth-of-type(2) {
+  transform-origin: left;
+}
+
+.nav span:nth-of-type(3) {
+  transform-origin: left;
+}
+
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+.nav input:checked ~ span:nth-of-type(1) {
+  opacity: 1;
+  transform: rotate(45deg) translate(0.2vw, 0);
+}
+
+// Hide the middle one:
+.nav input:checked ~ span:nth-of-type(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+// The last one should go the other direction:
+.nav input:checked ~ span:nth-of-type(3) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(-0.1vw, 0.2vw);
+}
+
+
+// Hide 'MENU' text:
+.nav input:checked ~ label {
+  opacity: 0;
+}
+.nav input:checked ~ span {
+  background: $nav-hamburger-color;
+}
+
+
+.nav__item {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0;
+
+  line-height: 10vh;
+  text-align: center;
+}
+
+
+.nav a {
+  padding: 0.5em 2em;
+
+  color: $nav-item-text-color;
+  font-size: 5vh;
+  text-decoration: none;
+}
+.nav a:hover {
+  color: $nav-item-text-color-hover;
+}

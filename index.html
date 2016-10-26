@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Running Heroes</title>
+    <link rel="stylesheet" type="text/css" href="css/root.css">
+  </head>
+  <body>
+
+    <nav class="nav">
+      <!-- Hidden heckbox acting as click reciever for menu toggle -->
+      <input type="checkbox" name="menu">
+      <label for="menu">MENU</label>
+
+      <!-- hamburger -->
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">Accueil</a></li>
+        <li class="nav__item"><a href="#">Lorem 1</a></li>
+        <li class="nav__item"><a href="#">Jeux</a></li>
+        <li class="nav__item"><a href="#">Lorem 2</a></li>
+        <li class="nav__item"><a href="#">Lorem 3</a></li>
+        <li class="nav__item"><a href="#">Lorem 4</a></li>
+        <li class="nav__item"><a href="#">Lorem 5</a></li>
+        <li class="nav__item"><a href="#">Lorem 6</a></li>
+        <li class="nav__item"><a href="#">Lorem 7</a></li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <h1 class="header__title">
+        <span>Running heroes</span>
+      </h1>
+    </header>
+
+    <main>
+      <section class="background">
+        <div class="background__image-area">
+          <picture class="background__image">
+            <source srcset="images/bk.png" media="(min-width: 40em)">
+            <source srcset="images/bk-mobile.png">
+            <img src="images/bk-mobile.png" alt="background">
+          </picture>
+
+          <h2 class="background__motto">
+            <div>rien</div>
+            <div>ne vous</div>
+            <div>arrête</div>
+          </h2>
+        </div>
+      </section>
+
+      <section class="content">
+
+        <article class="offer">
+          <div class="offer__date">
+            <div>Du 7 décembre 2015 au 15 septembre 2016</div>
+            <div>Du 14 décembre 2015 au 15 septembre 2016</div>
+          </div>
+          <div class="offer__clipart">
+            <img src="images/bk-offer.png" alt="graphic">
+            <div class="offer__clipart__text">une chance par jour !</div>
+            </div>
+          </div>
+          <div class="offer__punch-line">
+            <h2>A gagner</h2>
+            <h2>Gagnez</h2>
+          </div>
+
+          <ul class="offer__list">
+            <li class="offer__item">100 caméras d'action</li>
+            <li class="offer__item">150 dossards runningheroes</li>
+            <li class="offer__item">et plein d'autres cadeaux</li>
+          </ul>
+        </article>
+
+        <article class="email-form">
+          <form>
+            <label for="email">Rentrez votre email</label>
+            <input type="email" name="email" placeholder="E-MAIL">
+            <input type="submit" value="validez">
+          </form>
+        </article>
+
+      </section>
+
+      <footer class="main-footer">
+        Règlement - Crédit - Mentions légales - Protections des données
+      </footer>
+
+    </main>
+
+    <aside>
+      <section class="data-viz">
+        <header>
+          <h2 class="data-viz__title">Les data</h2>
+        </header>
+
+        <article class="data-viz__objectif">
+          <div class="data-viz__objectif__percentage">67 %</div>
+          <div class="data-viz__objectif__text">de l'objectif
+            <img class="data-viz__objectif__circle" src="images/circle.png" alt="visual percentage circle">
+          </div>
+        </article>
+
+        <article class="data-viz__gains">
+            <div class="data-viz__gains__total-bar">
+              <!-- used for background-image -->
+            </div>
+            <span class="data-viz__gains__partial-sum">54 821 €</span>
+            <span class="data-viz__gains__label">Gains</span>
+            <span class="data-viz__gains__total">100 000 €</span>
+            <div class="data-viz__gains__partial-bar"></div>
+        </article>
+      </section>
+    </aside>
+
+  </body>
+</html>

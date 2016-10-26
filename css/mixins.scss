@@ -1,0 +1,20 @@
+
+/* This returns a normal property size for mobile.
+ * or half of that size for large screens.
+ * Used for font-size that needs to remain fixed on zoom.
+ */
+@mixin responsive($property, $size, $optional-factor: "") {
+  // By default, use 50% reduction:
+  $factor: 0.5;
+  // If another factor is given, use that instead:
+  @if $optional-factor != "" {
+    $factor: $optional-factor;
+  }
+
+  #{$property}: $size;
+
+  // Use reduced value, using the factor:
+  @media screen and (min-width: $md-breakpt) {
+    #{$property}: $size * $factor;
+  }
+}

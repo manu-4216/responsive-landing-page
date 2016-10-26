@@ -1,0 +1,25 @@
+@import 'normalize';
+@import 'my-setup';
+@import 'fonts';
+@import 'constants';
+@import 'mixins';
+
+@import 'structure/header';
+@import 'structure/nav';
+@import 'structure/main';
+@import 'structure/data-viz';
+
+@import 'responsive'; /* adds responsiveness to the previous layouts: ;*/
+
+/*   STRUCTURE                  |  FILE
+ * ------------------------------------------------
+ *   header                     |  header.scss
+ *   nav                        |  nav.scss
+ *   main                       |  main.scss
+ *    > backgrCound                |  bckground.scss
+ *    > content:                |  content.scss
+ *       > ofer                 |  offer.scss
+ *       > email-form           |  email-form.scss
+ *   aside                      |  -
+ *    > data-viz                |  data-viz.scss
+ */
