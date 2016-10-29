@@ -921,6 +921,7 @@ aside {
   color: #878787;
   font-size: 2vw;
   letter-spacing: 0.1em;
+  outline: none;
 }
 
 @media screen and (min-width: 40em) {

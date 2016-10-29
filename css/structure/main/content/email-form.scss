@@ -21,6 +21,7 @@
     color: $email-text-color;
     @include responsive(font-size, 2vw, 0.4);
     letter-spacing: 0.1em;
+    outline: none;
   }
 
   input[type=submit] {
