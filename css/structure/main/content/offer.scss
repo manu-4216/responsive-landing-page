@@ -5,16 +5,7 @@
 .offer__date {
   @include responsive(font-size, 1.9vw, 0.4);
 
-  /* There are 2 variants of the text: mobile and large-screen.
-   * One will be displayed normally, and the other will be hidden. */
-  // 1.mobile:
-  div:first-child {
-    display: block; // visible
-  }
-  // 2. large-screens:
-  div:nth-of-type(2) {
-    display: none; // hidden
-  }
+  @include mobile-large-versions(div);
 }
 
 
@@ -22,18 +13,10 @@
   color: $offer-title-color;
   @include responsive(font-size, 5.7vw);
 
-  /* There are 2 variants of the text: mobile and large-screen.
-   * One will be displayed normally, and the other will be hidden. */
-  // 1.mobile:
+  @include mobile-large-versions(h2);
+
   h2 {
     font-weight: 300;
-  }
-  h2:first-child {
-    display: block; // visible
-  }
-  // 2.large-screens:
-  h2:nth-of-type(2) {
-    display: none; // hidden
   }
 }
 

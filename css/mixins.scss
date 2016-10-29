@@ -18,3 +18,30 @@
     #{$property}: $size * $factor;
   }
 }
+
+
+
+/* This centralizes the display of 2 versions of a content:
+ * Mobile screen: only the first child is visible
+ * Large sceens: only the 2nd one is visible.
+ */
+@mixin mobile-large-versions($child) {
+
+  /* Mobile: */
+  #{$child}:first-child {
+    display: block;
+  }
+  #{$child}:nth-of-type(2) {
+    display: none;
+  }
+
+  /* Large screen: */
+  @media screen and (min-width: $md-breakpt) {
+    #{$child}:first-child {
+      display: none;
+    }
+    #{$child}:nth-of-type(2) {
+      display: block;
+    }
+  }
+}

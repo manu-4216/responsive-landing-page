@@ -446,35 +446,6 @@ template {
   display: none;
 }
 
-h1, h2, h3, h4, h5 {
-  margin: 0;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  font-size: 16px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-header, main, aside, nav, footer, section, article, div, image {
-  box-sizing: border-box;
-}
-
-aside {
-  display: block;
-}
-
 @font-face {
   font-family: 'edosz';
   src: url("../fonts/edosz.eot");
@@ -509,6 +480,39 @@ form, footer {
  * or half of that size for large screens.
  * Used for font-size that needs to remain fixed on zoom.
  */
+/* This centralizes the display of 2 versions of a content:
+ * Mobile screen: only the first child is visible
+ * Large sceens: only the 2nd one is visible.
+ */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header, main, aside, nav, footer, section, article, div, image {
+  box-sizing: border-box;
+}
+
+aside {
+  display: block;
+}
+
 .header {
   text-align: center;
 }
@@ -796,8 +800,8 @@ form, footer {
 
 .offer__date {
   font-size: 1.9vw;
-  /* There are 2 variants of the text: mobile and large-screen.
-   * One will be displayed normally, and the other will be hidden. */
+  /* Mobile: */
+  /* Large screen: */
 }
 
 @media screen and (min-width: 40em) {
@@ -814,11 +818,20 @@ form, footer {
   display: none;
 }
 
+@media screen and (min-width: 40em) {
+  .offer__date div:first-child {
+    display: none;
+  }
+  .offer__date div:nth-of-type(2) {
+    display: block;
+  }
+}
+
 .offer__punch-line {
   color: #BE1F3B;
   font-size: 5.7vw;
-  /* There are 2 variants of the text: mobile and large-screen.
-   * One will be displayed normally, and the other will be hidden. */
+  /* Mobile: */
+  /* Large screen: */
 }
 
 @media screen and (min-width: 40em) {
@@ -827,16 +840,25 @@ form, footer {
   }
 }
 
-.offer__punch-line h2 {
-  font-weight: 300;
-}
-
 .offer__punch-line h2:first-child {
   display: block;
 }
 
 .offer__punch-line h2:nth-of-type(2) {
   display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .offer__punch-line h2:first-child {
+    display: none;
+  }
+  .offer__punch-line h2:nth-of-type(2) {
+    display: block;
+  }
+}
+
+.offer__punch-line h2 {
+  font-weight: 300;
 }
 
 .offer__list {
@@ -1186,22 +1208,6 @@ main {
   main .content {
     display: inline-block;
     width: 46%;
-  }
-  /* HANDLE TEXT DIFERENCES (mobile vs large-screen):
-    * 1. GAGNEZ / A GAGNER
-    * 2.  date ' DU ... Decembre'
-    */
-  .offer__punch-line h2:first-child {
-    display: none;
-  }
-  .offer__punch-line h2:nth-of-type(2) {
-    display: block;
-  }
-  .offer__date div:first-child {
-    display: none;
-  }
-  .offer__date div:nth-of-type(2) {
-    display: block;
   }
   .content {
     position: absolute;

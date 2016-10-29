@@ -22,32 +22,6 @@
   }
 
 
-  /* HANDLE TEXT DIFERENCES (mobile vs large-screen):
-    * 1. GAGNEZ / A GAGNER
-    * 2.  date ' DU ... Decembre'
-    */
-  .offer__punch-line {
-    // mobile date:
-    h2:first-child {
-      display: none;
-    }
-    // desktop date:
-    h2:nth-of-type(2) {
-      display: block;
-    }
-  }
-
-  .offer__date {
-    // mobile date:
-    div:first-child {
-      display: none;
-    }
-    // desktop date:
-    div:nth-of-type(2) {
-      display: block;
-    }
-  }
-
   // OTHER LAYOUT POSITIONING FIXES & ADJUSTMENTS:
   .content {
     position: absolute;
@@ -57,11 +31,13 @@
     transform: translate(-50%, -45%);
   }
 
+
   // Move the footer relative to the background image:
   .main-footer {
     left: 50%;
     transform: translateX(-25%);
   }
+
 
   // DATA-VIZ
   .data-viz__objectif {
@@ -76,20 +52,24 @@
     display: inline-block;
   }
 
+
   // Display the clipart for large screens:
   .offer__clipart {
     display: block;
   }
 
+
   .nav label {
       display: block; // show for large screens
   }
+
 
   // Replaces the mobile-first color:
   .nav span {
     background: $nav-hamburger-color;
   }
 }
+
 
 
 @media screen and (min-width: $lg-breakpt) {
@@ -104,6 +84,7 @@
     }
   }
 
+
   .content {
     height: 100vh;
     .offer {
@@ -111,9 +92,11 @@
     }
   }
 
+
   .header__title {
     top: 9vh;
   }
+
 
   .offer__clipart {
     display: block;
