@@ -13,4 +13,4 @@ Final webpage available here:
 
 Optimizations:
 * use multiple images of multiple sizes
-* add autoprefixer to the build
+* add autoprefixer to the build (update: done)
